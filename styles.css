@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right,#0a75cd,#bfe7f4);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#header .break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+#header .logo {
+  max-width: 20rem;
+}
+
+#header #inputPokemon {
+  padding-left: 20px;
+  margin-top: 10px;
+  min-width: 40rem;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 5px;
+  font-size: 25px;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  margin-top: 30px;
+}
+#container #pokedex{
+  max-width: 70%;
+  min-width: 70%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas:
+    "pokemon pokemon pokemon pokemon pokemon";
+}
+
+#container #pokedex .pokemon{
+  background-image: url(./img/background.png);
+  background-position: center;
+  display: block;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 300px;
+}
+
+#container #pokedex .pokemon img{ 
+  background-color: #bfe7f4;
+  border-radius: 50%;
+  margin-left: 28%;
+  margin-top: 95px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+#container #pokedex .pokemon h4{
+  color: aliceblue;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#container #pokedex .pokemon h6{
+  color: #000000;
+  background-color: aliceblue;
+  width: 30px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+li:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+
+
+@media (min-width: 1200px) {
+  #container #pokedex{
+    grid-template-areas:
+      "pokemon pokemon pokemon pokemon pokemon";
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px){
+  #container #pokedex{
+    grid-template-areas:
+      "pokemon pokemon pokemon pokemon";
+  }
+}
+
+@media (min-width: 680px) and (max-width: 899px){
+  #container #pokedex{
+    grid-template-areas:
+      "pokemon pokemon pokemon";
+  }
+}
+
+@media (min-width: 440px) and (max-width: 679px){
+  #container #pokedex{
+    grid-template-areas:
+      "pokemon pokemon";
+  }
+  #header #inputPokemon {
+    min-width: 95%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 439px){
+  #container #pokedex{
+    grid-template-areas:
+      "pokemon";
+  }
+  #header #inputPokemon {
+    min-width: 95%;
+  }
+  #header #inputPokemon .logo{
+    max-width: 15rem;
+  }
+}
